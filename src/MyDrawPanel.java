@@ -6,8 +6,14 @@ public class MyDrawPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
 
-        g.setColor(Color.RED);
-        g.fillRect(20, 50, 100, 100);
+        g.fillRect(0, 0, this.getWidth(), this.getHeight());
 
+        int red = (int) (Math.random() * 255);
+        int green = (int) (Math.random() * 255);
+        int blue = (int) (Math.random() * 255);
+
+        Color color = new Color(red, green, blue);
+        g.setColor(color);
+        g.fillRect(70, 70, 100, 100);
     }
 }
